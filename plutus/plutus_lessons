@@ -1,0 +1,34 @@
+CONTINUE: https://www.youtube.com/watch?v=wNXKiQanLTc&list=PL53JxaGwWUqAE59_XRxhwDuN1QrBgbIav&index=1
+
+FUNDAMENTALS 
+    utxo:
+        eutxo:
+    template haskell: similar to all plutus smart contract 
+    on chain(validator script): code that is located on the cardano node or simply the blockchain
+        - contains the datum/redeemer
+    off chain: code that you would send to the on chain code 
+    minting policies
+    state machines 
+    plutus paplication framework (paf)
+    plutus paplication backend (pab)
+
+    sample plutus smart contract flow 
+        user wants to guess the box price 
+            -> offchain
+                - contains the input of customer's guess price vlaue
+                - contains the ada he locked or pay to guess
+            -> on chain 
+                datum
+                    - contains the box's price 
+                    - contains the ada reward
+                redeemer 
+                    - datum must be equal to the customer's guess value
+                        - if false do nothing 
+                        - if true grab the ada reward from datum and release it to the user
+    default plutus smart contract architecture 
+        -> offchain (think of this as frontend where user interacts)
+            - function for locking user's ada 
+        -> onchain (think of this as backend)
+            - datum: containing ada reward 
+            - redeemer: condition to claim datum 
+
