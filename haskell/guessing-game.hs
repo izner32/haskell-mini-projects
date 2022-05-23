@@ -1,3 +1,7 @@
+-- here, we learn about IO 
+-- here, we learn about declaring variables
+-- here, we learn about looping with recursion 
+
 -- run game function 
 runGame :: Int -> IO () -- function_name :: argument1_type -> return_type 
 runGame incorrectGuesses = do -- function_name parameter  = function_definition 
